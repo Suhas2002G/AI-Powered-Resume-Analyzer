@@ -7,34 +7,43 @@ from fastapi import FastAPI
 # from fastapi.middleware.cors import CORSMiddleware
 # from starlette.middleware.sessions import SessionMiddleware
 
-# Import routers
+# Import routers and utils
 from routes import extract_router
 from utils.exceptions import register_exception_handlers
 from utils.logger_manager import LoggerManager
+from core import settings
 
-app = FastAPI()
-
-# Register global exception handlers
-register_exception_handlers(app)
-
-# Create logger instance
+# ---------------------------------------------------------
+# Setup logger
+# ---------------------------------------------------------
 logger = LoggerManager(__name__, log_type="info")
 
-# Fastapi lifespan
+# ---------------------------------------------------------
+# Define lifespan BEFORE app creation
+# ---------------------------------------------------------
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("[Startup] Application starting...")
     yield
     logger.info("[Shutdown] Application shutting down...")
 
-
-
+# ---------------------------------------------------------
+# Create app instance (only once)
+# ---------------------------------------------------------
 app = FastAPI(lifespan=lifespan)
 
+# ---------------------------------------------------------
+# Register global exception handlers
+# ---------------------------------------------------------
+register_exception_handlers(app)
+
+# ---------------------------------------------------------
+# Middleware (commented until needed)
+# ---------------------------------------------------------
 # app.add_middleware(
 #     CORSMiddleware,
-#     allow_origins=os.getenv("FRONTEND_URL"),
-#     allow_credentials=True,  # MUST BE TRUE
+#     allow_origins=settings.FRONTEND_URL,
+#     allow_credentials=True,
 #     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 #     allow_headers=["*"],
 #     expose_headers=["*"]
@@ -46,11 +55,15 @@ app = FastAPI(lifespan=lifespan)
 #     https_only=False   # Set to True in production
 # )
 
-# Register routers
+# ---------------------------------------------------------
+# Include Routers
+# ---------------------------------------------------------
 # app.include_router(auth_router, prefix="/auth")
 app.include_router(extract_router, prefix="/extract")
 
-
+# ---------------------------------------------------------
+# Health Check Endpoint
+# ---------------------------------------------------------
 @app.get("/")
 def health_check():
     return {"status": "API Running"}

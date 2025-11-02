@@ -12,6 +12,10 @@ class Settings:
     # Database
     DB_URL: str = os.getenv("DATABASE_URL")
 
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+    GROK_API_URL = os.getenv("GROK_API_URL")
+    GROK_MODEL = os.getenv("GROK_MODEL")
+
     # JWT-Auth settings
     SECRET_KEY = os.getenv("SECRET_KEY")
     REFRESH_SECRET_KEY = os.getenv("REFRESH_SECRET_KEY")
