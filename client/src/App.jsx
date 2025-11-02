@@ -33,6 +33,7 @@ function App() {
             {/* vercel monitoring component  */}
             <Analytics />
             <SpeedInsights />
+            
           </div>
         </ThemeProvider>
       </Router>

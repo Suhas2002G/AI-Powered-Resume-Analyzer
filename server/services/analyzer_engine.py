@@ -48,8 +48,7 @@ class AnalyzerEngine:
                 "domain_expertise_score": <integer 0-100>,
                 "soft_skills_score": <integer 0-100>,
                 "communication_clarity_score": <integer 0-100>,
-                "career_progression_score": <integer 0-100>,
-                "future_potential_score": <integer 0-100>
+                "career_progression_score": <integer 0-100>
             }},
 
             "keyword_analysis": {{

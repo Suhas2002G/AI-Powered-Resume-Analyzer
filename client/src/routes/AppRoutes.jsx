@@ -13,6 +13,8 @@ import Home from "../pages/Home";
 // import Register from "../components/auth/Register";
 import Unauthorized from "../components/shared/Unauthorized";
 import PageNotFound from "../components/shared/PageNotFound";
+import UploadResume from "../pages/UploadResume";
+import AtsReport from "../pages/AtsReport";
 
 
 
@@ -23,6 +25,7 @@ const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/unauthorized" element={<Unauthorized />} />
       <Route path="*" element={<PageNotFound />} />
+      <Route path="/ats-report" element={<AtsReport />} />
       {/* <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} /> */}
       
@@ -31,20 +34,12 @@ const AppRoutes = () => {
       <Route
         path="/resume/analysis"
         element={
-          <PrivateRoute allowedRoles={["admin", "user"]}>
-            <Project />
-          </PrivateRoute>
+          // <PrivateRoute allowedRoles={["admin", "user"]}>
+            <UploadResume />
+          // </PrivateRoute>
         }
       >
-        {/* <Route path="create" element={<CreateProject />} />
-        <Route path="data-import" element={<DataImport />} />
-        <Route path="fetch-relationships" element={<FetchRelationships />} />
-        <Route path="data-modification" element={<DataModification />} />
-        <Route path="column-classifier" element={<ColumnClassifier />} />
-        <Route path="hierarchy" element={<HierarchyDetection />} />
-        <Route path="plots" element={<Plots />} />
-        <Route path="ml-prediction" element={<MLPrediction />} />
-        <Route path="ai-reports" element={<AIReports />} /> */}
+
       </Route>
 
       
