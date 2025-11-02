@@ -54,7 +54,7 @@ const Footer = () => {
                 <Mic className="h-6 w-6 text-white" />
               </div>
               <span className="text-2xl font-bold text-gray-900 dark:text-white">
-                InterviewAI
+                CampusToCorpo
               </span>
             </motion.div>
             <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md">
@@ -102,7 +102,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
-            © 2024 InterviewAI. All rights reserved.
+            © 2024 CampusToCorpo. All rights reserved.
           </p>
           
           <motion.button

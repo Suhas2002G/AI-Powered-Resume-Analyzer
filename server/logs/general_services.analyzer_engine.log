@@ -50,3 +50,7 @@
 2025-11-02 20:58:40,997 - INFO - [logger_manager.py:60 - log()] - LLM response received successfully
 2025-11-02 21:01:42,354 - INFO - [logger_manager.py:60 - log()] - AnalyzerEngine initialized successfully
 2025-11-02 21:01:44,601 - INFO - [logger_manager.py:60 - log()] - LLM response received successfully
+2025-11-02 21:03:38,449 - INFO - [logger_manager.py:60 - log()] - AnalyzerEngine initialized successfully
+2025-11-02 21:03:40,946 - INFO - [logger_manager.py:60 - log()] - LLM response received successfully
+2025-11-02 21:05:14,770 - INFO - [logger_manager.py:60 - log()] - AnalyzerEngine initialized successfully
+2025-11-02 21:05:17,083 - INFO - [logger_manager.py:60 - log()] - LLM response received successfully
