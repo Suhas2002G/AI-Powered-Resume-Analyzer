@@ -1,0 +1,9 @@
+2025-11-02 17:17:15,553 - INFO - [logger_manager.py:60 - log()] - Text extraction completed successfully.
+2025-11-02 17:33:03,477 - INFO - [logger_manager.py:60 - log()] - Successfully extracted text from uploaded PDF.
+2025-11-02 17:34:42,858 - ERROR - [logger_manager.py:60 - log()] - Invalid file type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+2025-11-02 17:36:47,389 - ERROR - [logger_manager.py:60 - log()] - Invalid file type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+2025-11-02 18:00:31,409 - INFO - [logger_manager.py:60 - log()] - Successfully extracted text from uploaded PDF.
+2025-11-02 18:03:51,999 - INFO - [logger_manager.py:60 - log()] - Successfully extracted text from uploaded PDF.
+2025-11-02 18:12:06,699 - INFO - [logger_manager.py:60 - log()] - Successfully extracted text from uploaded PDF.
+2025-11-02 18:13:14,076 - INFO - [logger_manager.py:60 - log()] - Successfully extracted text from uploaded PDF.
+2025-11-02 18:19:02,656 - INFO - [logger_manager.py:60 - log()] - Successfully extracted text from uploaded PDF.
