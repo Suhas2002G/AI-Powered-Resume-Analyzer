@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Define dark mode variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Your custom animations */
 @keyframes gradient {
   0%, 100% {
@@ -57,7 +60,7 @@ body {
   background: rgb(243 244 246);
 }
 
-.dark ::-webkit-scrollbar-track {
+:is(.dark, .dark *) ::-webkit-scrollbar-track {
   background: rgb(31 41 55);
 }
 
@@ -70,11 +73,11 @@ body {
   background: rgb(107 114 128);
 }
 
-.dark ::-webkit-scrollbar-thumb {
+:is(.dark, .dark *) ::-webkit-scrollbar-thumb {
   background: rgb(75 85 99);
 }
 
-.dark ::-webkit-scrollbar-thumb:hover {
+:is(.dark, .dark *) ::-webkit-scrollbar-thumb:hover {
   background: rgb(107 114 128);
 }
 
@@ -82,17 +85,4 @@ body {
 img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
-}
-
-/* Animation classes */
-.animate-gradient {
-  animation: gradient 3s ease infinite;
-}
-
-.animate-scroll-left {
-  animation: scroll-left 30s linear infinite;
-}
-
-.animate-scroll-right {
-  animation: scroll-right 30s linear infinite;
 }

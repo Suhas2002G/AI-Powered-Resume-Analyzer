@@ -4,7 +4,7 @@ from contextlib import asynccontextmanager
 
 # Third-party imports
 from fastapi import FastAPI
-# from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 # from starlette.middleware.sessions import SessionMiddleware
 
 # Import routers and utils
@@ -40,14 +40,14 @@ register_exception_handlers(app)
 # ---------------------------------------------------------
 # Middleware (commented until needed)
 # ---------------------------------------------------------
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=settings.FRONTEND_URL,
-#     allow_credentials=True,
-#     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-#     allow_headers=["*"],
-#     expose_headers=["*"]
-# )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.FRONTEND_URL,
+    allow_credentials=True,
+    allow_methods=["GET", "POST",],
+    allow_headers=["*"],
+    expose_headers=["*"]
+)
 
 # app.add_middleware(
 #     SessionMiddleware,
