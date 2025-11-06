@@ -82,7 +82,7 @@ const Home = () => {
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center space-x-2"
               >
                 <Play size={20} />
-                <span>Start Free Interview</span>
+                <span>Analyze Resume</span>
                 <ArrowRight size={20} />
               </motion.button>
               
